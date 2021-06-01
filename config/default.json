@@ -1,4 +1,7 @@
 {
     "mongoURI" : "mongodb+srv://amirtha_yazhini_232:yazhini@05@cluster0.hljej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "jwtSecret" : "mayisawesome"
+    "jwtSecret" : "mayisawesome",
+    "githubClientId" : "46193fa729c6e6a2ce50",
+    "githubSecret" : "7e2a7205f6b5784e961537e4476c22311142ff3a",
+    
 }

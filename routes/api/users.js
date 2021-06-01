@@ -6,6 +6,7 @@ const gravatar = require('gravatar')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const config = require('../../config/default.json')
+
 // @route POST api/users
 //@desc   Register User
 //@access Public
