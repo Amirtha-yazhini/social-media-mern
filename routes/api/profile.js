@@ -6,6 +6,7 @@ const User = require('../../models/User')
 const {check,validationResult} = require('express-validator')
 const request = require('request')
 const config = require('config')
+const normalize = require('normalize-url')
 
 // @route GET api/profile/me
 //@desc   get current users profile
@@ -80,7 +81,7 @@ router.post(
         { user: req.user.id },
         { $set: profileFields },
         { new: true, upsert: true, setDefaultsOnInsert: true },
-        {useFindandModify: false}
+       
       );
       return res.json(profile);
     } catch (err) {

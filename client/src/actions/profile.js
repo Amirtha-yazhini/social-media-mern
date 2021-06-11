@@ -17,7 +17,7 @@ export const getCurrentProfile = ()=> async dispatch=>{
     } catch (err) {
         dispatch({
             type: PROFILE_ERROR,
-            payload: { msg: err.response.data.msg, status: err.response.status }
+            payload: { msg: err.response.data, status: err.response.status }
         })
         
     }
@@ -39,7 +39,7 @@ export const createProfile = (formData,history, edit=false)=>async dispatch=>{
             payload: res.data
         })
 
-        dispatch(setAlert(edit ? 'Profile updated' :'Profile created'))
+        dispatch(setAlert(edit ? 'Profile updated' :'Profile created','success'))
 
         if(!edit){
             history.push('/dashboard')
